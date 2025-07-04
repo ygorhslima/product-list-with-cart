@@ -1,6 +1,6 @@
 # template de e-commerce fictício de delivery de comidas em React
 
-Este é um exemplo que obtive no site do [[https://www.frontendmentor.io/|frontend-mentor]] e esse foi o primeiro projeto que fiz utilizando a biblioteca do React
+Este é um exemplo que obtive no site do frontend mentor https://www.frontendmentor.io/ e esse foi o primeiro projeto que fiz utilizando a biblioteca do React
 
 ## visão geral do projeto
 
