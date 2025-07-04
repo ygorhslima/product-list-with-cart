@@ -18,5 +18,22 @@
 }
 
 body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-image: linear-gradient(to bottom,var(--Rose50),var(--Rose100));
+}
+
+.app-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.dessert-list-container{
+  flex-grow: 1;
 }

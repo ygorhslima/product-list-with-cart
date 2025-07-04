@@ -1,0 +1,126 @@
+.container-cart-sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    height: fit-content; /* Ajusta a altura ao conteúdo */
+}
+
+.cart-title {
+    color: var(--rose-900);
+    font-size: 24px;
+    margin: 0 0 24px 0;
+}
+
+/* Estilos para o carrinho vazio */
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cart-empty img {
+    width: 128px;
+    height: 128px;
+}
+
+.cart-empty p {
+    color: var(--rose-500);
+    font-weight: 600;
+}
+
+/* Lista de itens */
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid var(--rose-100);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-info .item-name {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: var(--rose-900);
+}
+
+.item-details {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.item-quantity {
+    font-weight: 600;
+    color: var(--red);
+}
+
+.item-price-single, .item-price-total {
+    color: var(--rose-500);
+    font-weight: 500;
+}
+
+.remove-item-btn {
+    background: transparent;
+    border: 1px solid var(--rose-400);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remove-item-btn:hover {
+    border-color: var(--rose-900);
+}
+
+.remove-item-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(18%) saturate(2333%) hue-rotate(328deg) brightness(94%) contrast(90%); /* Converte para a cor --rose-900 */
+}
+
+/* Total do pedido */
+.order-total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--rose-900);
+}
+
+.order-total-price {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Botão de confirmar */
+.confirm-order-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.confirm-order-btn:hover {
+    background-color: var(--dark-red);
+}
