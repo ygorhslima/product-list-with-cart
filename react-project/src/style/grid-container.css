@@ -1,0 +1,56 @@
+@media screen and (orientation: landscape) {
+  :root {
+    --color-red: hsl(14, 86%, 42%);
+    --color-green: hsl(159, 69%, 38%);
+    --rose-50: hsl(20, 50%, 98%);
+    --rose-100: hsl(13, 31%, 94%);
+    --rose-300: hsl(14, 25%, 72%);
+    --rose-400: hsl(7, 20%, 60%);
+    --rose-500: hsl(12, 20%, 44%);
+    --rose-900: hsl(14, 65%, 9%);
+  }
+  
+  
+  
+  /* ========== TÍTULO ========== */
+  .title_dessert {
+    color: var(--color-red);
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  
+  /* ========== GRID CONTAINER ========== */
+  .container_dessert {
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    grid-auto-rows: auto;
+    gap: 20px;
+    justify-content: start;
+    align-content: start;
+  }  
+}
+
+
+
+@media (max-width: 768px) {
+  .container_dessert {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .title_dessert {
+    color: var(--color-red);
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .container_dessert {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}

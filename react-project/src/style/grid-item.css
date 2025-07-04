@@ -1,0 +1,64 @@
+:root {
+  --color-red: hsl(14, 86%, 42%);
+  --color-green: hsl(159, 69%, 38%);
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+}
+
+
+
+/* ========== GRID ITEM ========== */
+.grid_item {
+  padding: 5px;
+}
+
+/* Imagem + botão */
+.container_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagem */
+.grid_item__image {
+  border-radius: 15px;
+  width: 230px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid_item__image:hover {
+  transform: scale(1.03);
+}
+
+
+/* ========== DESCRIÇÃO DA SOBREMESA ========== */
+.container_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.grid_item__category {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--rose-900);
+}
+
+.grid_item__name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.grid_item__price {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
