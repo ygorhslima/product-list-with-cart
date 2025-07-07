@@ -19,7 +19,7 @@ export default function GridItemDessert({ item, cartQuantity, onAddToCart, onRem
               <p className='grid_item__name'>{item.name}</p>
               <p className='grid_item__price'>${item.price.toFixed(2)}</p>
             </div>
-          </div>
+        </div>
     </>
   )
 }

@@ -23,7 +23,7 @@ export default function CartSideBar({ cart, data, onClearItem }) {
   // 3. Calcula a quantidade total de itens no carrinho.
   const totalItems = Object.values(cart).reduce((sum, quantity) => sum + quantity, 0);
 
-  return (
+  return (  
     <aside className="container-cart-sidebar">
       {/* O título agora mostra a quantidade total de itens dinamicamente */}
       <h2 className="cart-title">Your Cart ({totalItems})</h2>
