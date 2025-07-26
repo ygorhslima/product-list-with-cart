@@ -5,11 +5,24 @@ import CartSideBar from './CartSideBar'
 
 import data from '../public/data.json'
 
+/**
+ * Componente principal da aplicação.
+ * Gerencia o estado do carrinho de compras e renderiza a lista de sobremesas e a barra lateral do carrinho.
+ * @returns {JSX.Element} O componente App renderizado.
+ */
 function App() {
-  // O estado do carrinho agora vive aqui!
-  // A chave é o nome do item, o valor é a quantidade.
+  /**
+   * Estado que armazena os itens no carrinho de compras.
+   * A estrutura é um objeto onde cada chave é o nome do item (string)
+   * e o valor correspondente é a quantidade desse item (number).
+   * @type {[Object<string, number>, React.Dispatch<React.SetStateAction<Object<string, number>>>]}
+   */
   const [cart, setCart] = useState({});
 
+  /**
+   * Adiciona um item ao carrinho. Se o item já existir, incrementa sua quantidade.
+   * @param {string} itemName - O nome do item a ser adicionado.
+   */
   const handleAddToCart = (itemName) => {
     setCart(prevCart => ({
       ...prevCart,
@@ -17,6 +30,12 @@ function App() {
     }));
   };
 
+  /**
+   * Remove uma unidade de um item do carrinho.
+   * Se a quantidade do item for maior que 1, decrementa a quantidade.
+   * Caso contrário, o item é removido completamente do carrinho.
+   * @param {string} itemName - O nome do item a ser removido.
+   */
   const handleRemoveFromCart = (itemName) => {
     setCart(prevCart => {
       const newCart = { ...prevCart };
@@ -29,6 +48,10 @@ function App() {
     });
   };
 
+  /**
+   * Remove um item completamente do carrinho, independentemente da sua quantidade.
+   * @param {string} itemName - O nome do item a ser removido do carrinho.
+   */
   const handleClearItemFromCart = (itemName) => {
     setCart(prevCart => {
       const newCart = { ...prevCart };
@@ -44,7 +67,7 @@ function App() {
         <ContainerDessert>
           {data.map((item) => (
             <GridItemDessert 
-              key={item.name} // Usando uma chave única do item
+              key={item.name} // Chave única para cada item na lista, essencial para a performance e reconciliação do React.
               item={item}
               cartQuantity={cart[item.name] || 0}
               onAddToCart={() => handleAddToCart(item.name)}
